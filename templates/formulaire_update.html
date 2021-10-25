@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        {% block head %}
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        {% endblock %}
+    </head>
+
+    <body>
+
+        {% block content %}
+
+        <!-- formulaire qui une fois soumis enverra les données en POST -->
+        <form action="{{url_for('update_continent')}}" method="post">
+
+            <input type="hidden" value="{{data.get('id')}}" name="id">
+
+            <label> nom du continent
+                <input type="text" value="{{data.get('nom')}}" name="nom">
+            </label>
+
+            <input type="submit" value="envoyer">
+        </form>
+        {% endblock %}
+
+    </body>
+
+</html>

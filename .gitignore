@@ -1,0 +1,2 @@
+# les dossiers et fichiers présents dans venv/lib ne seront pas add dans git
+venv/Lib
